@@ -1,6 +1,8 @@
 var app = angular.module("sampleApp", []);
 app.controller("SampleCtrl", function($scope, $http) {
 
+  $scope.loading = true;
+
   // Simple GET request example:
   $http({
     method: 'GET',
@@ -10,6 +12,7 @@ app.controller("SampleCtrl", function($scope, $http) {
     // this callback will be called asynchronously
     // when the response is available
     console.log(response.data);
+    $scope.loading = false;
     $scope.data = response.data.posts;
 
   }, function errorCallback(response) {

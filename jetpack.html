@@ -36,6 +36,7 @@
 
 	  <body ng-controller="SampleCtrl">
 
+			<h1 ng-if="loading">loading...</h1>
 			<h1 ng-repeat="page in data">{{page.title}}</h1>
 
 	  </body>
