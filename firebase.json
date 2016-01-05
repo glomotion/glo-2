@@ -1,5 +1,5 @@
 {
-  "firebase": "glo2",
+  "firebase": "glo-version-1",
   "public": "public",
   "ignore": [
     "firebase.json",
