@@ -9,7 +9,7 @@ jQuery(document).ready(function () {
 
     searchWatermark('#keyword');
 
-    // GLO LOGO UX ENCHANCEMENT ----------------------------------   
+    // GLO LOGO UX ENCHANCEMENT ----------------------------------
     $("#a-glo-logo").hover(function () {
         $(this).addClass("hover").stop().animate({
             backgroundPosition: "(-777px 0)"
@@ -20,7 +20,7 @@ jQuery(document).ready(function () {
         }, 1000, 'easeInOutExpo');
     });
 
-    // FADE BG TO EMPHASISE SLIDER ----------------------------------  
+    // FADE BG TO EMPHASISE SLIDER ----------------------------------
     $(".d-thmb-slidr").hover(function () {
         $("#d-msk").addClass("hover").stop().css({
             'z-index': '6'
@@ -39,7 +39,7 @@ jQuery(document).ready(function () {
         });
     }
 
-    // Skills Graph Hover UX ----------------------------------  
+    // Skills Graph Hover UX ----------------------------------
     $("#sp-sklls-chrt a em").css({'opacity': '0'});
     $("#sp-sklls-chrt a").hover(function () {
         $(this).find('em').stop().animate({
@@ -64,7 +64,7 @@ jQuery(document).ready(function () {
         return false;
     });
 
-    // THUMB SLIDER UI ENHANCEMENT ----------------------------------  
+    // THUMB SLIDER UI ENHANCEMENT ----------------------------------
     $(".d-thmb-slidr li").hover(function () {
 
         if ($(this).find('a').hasClass('on')) {
@@ -147,7 +147,7 @@ jQuery(document).ready(function () {
     });
     $('.li-shtb').click(function () {
 		shtb();
-    });			
+    });
 
     getRandom();
 
@@ -156,10 +156,10 @@ jQuery(document).ready(function () {
         return false;
     });
 
-    // Folio Filter navigaiton --------------- 
+    // Folio Filter navigaiton ---------------
     $('#portfolio-filter .all a').addClass('active');
 
-    // Folio Filter Hover FX --------------- 
+    // Folio Filter Hover FX ---------------
     $(".pf-item a").hover(function () {
         $(this).find('span').stop().animate({
             left: '0'
@@ -193,23 +193,23 @@ jQuery(document).ready(function () {
     });
 
     $('#portfolio-filter a').click(function () {
-		
+
 		if($(this).hasClass('active')) {
-		
+
 			// do nothing
-		
+
 		} else {
-			
+
 			var type = $(this).attr('href').replace('#', '');
 			var rstWdth = "-60px";
 			var hvrWdth = "-9px";
-			
+
 			if (type == 'all') {
 				$('#portfolio-list li').animate({
 					width: 'show',
 					opacity: 'show'
 				}, 1000, 'easeInOutExpo');
-			
+
 			} else {
 				$('#portfolio-list li:not(.' + type + ')').animate({
 					width: 'hide',
@@ -220,31 +220,31 @@ jQuery(document).ready(function () {
 					opacity: 'show'
 				}, 1000, 'easeInOutExpo');
 			}
-			
+
 			$('.active').animate({ marginLeft: rstWdth }, 200);
-			
+
 			$('.active').removeClass('active');
-			
+
 			$(this).addClass('active');
-			
-			
+
+
 			window.setTimeout(function () {
 				$('#rght-col').height($('#d-kng-cntnr .d-cntnr').height());
 				$('html, body').animate({
 					scrollTop: 0
 				}, "slow");
 			}, 1001, 'easeInOutExpo');
-			
-			return false;			
-			
-		}       
-		
+
+			return false;
+
+		}
+
     });
 
     // SETUP VID SWAP FOR FOLIO MOTION PROJECTS ---------------
-    var cncLrge = "/wp-content/themes/glo-folio-2.0/folio-vids/cnc.html";
-    var sseLrge = "/wp-content/themes/glo-folio-2.0/folio-vids/sse.html";
-    var fcLrge = "/wp-content/themes/glo-folio-2.0/folio-vids/freckle.html";
+    var cncLrge = "/static/wp-content/themes/glo-folio-2.0/folio-vids/cnc.html";
+    var sseLrge = "/static/wp-content/themes/glo-folio-2.0/folio-vids/sse.html";
+    var fcLrge = "/static/wp-content/themes/glo-folio-2.0/folio-vids/freckle.html";
     var vidAjax = $('#d-mn-img')
 
     $('#vid-swp-cnc').click(function () {
@@ -287,7 +287,7 @@ jQuery(document).ready(function () {
         return false;
     });
 
-    // Innit Portfolio item page Image slider ------------------------ 
+    // Innit Portfolio item page Image slider ------------------------
     $('#ul-pf-itm-slidr').aviaSlider({
         blockSize: {
             height: 130,
@@ -301,35 +301,35 @@ jQuery(document).ready(function () {
         slideControlls: 'items',
         appendControlls: '#ul-pf-itm-slidr'
     });
-	
-	
+
+
 	// --------------------
 	// ********************
 	// Fixes needed for the layout to render properly (should try to get this working without JS sometime) :P --------------------------------------------------
-	
-    // FIX alignment of Footer IceShelf on Page Load ----------------------------------   
+
+    // FIX alignment of Footer IceShelf on Page Load ----------------------------------
     var f = $('#s-footr-top');
     var w = f.width();
     var e = 200;
     f.css("background-position", (w + e) + "px bottom"); // Needs to be w+=200 to work properly....
-    
-	// FIX alignment of Thumb Slider Next Button ----------------------------------   
+
+	// FIX alignment of Thumb Slider Next Button ----------------------------------
     var bot = $('#bottom');
     var bw = bot.width();
     var xtr = 80;
     $('#d-thmb-slidrs #a-nxt2').css("margin-left", (bw + xtr) + "px"); // Needs to be w+=80 to work properly....
-	
-	// set height of #inflow-intro-substitute (on all pages) ------- 
+
+	// set height of #inflow-intro-substitute (on all pages) -------
     var inflow = $('#inflow-intro-substitute');
 	var outflow = $('#s-intro');
     var outflowWidth = outflow.outerHeight();
     inflow.css("height", outflowWidth + "px");
-	
-    // FIX height of green bar on right side ----------------------------------   
+
+    // FIX height of green bar on right side ----------------------------------
     var asideHeight = $('#d-kng-cntnr .d-cntnr').outerHeight();
 	// console.log(asideHeight);
-    $('#rght-col').height(asideHeight);	
-	
+    $('#rght-col').height(asideHeight);
+
 
 }); // Close Document Ready Call ---------------------------------------------------------------------
 
@@ -339,26 +339,26 @@ $.ajaxSetup({
     cache: true
 });
 
-var ajax_load = "<img style='padding: 133px 0 0 246px' src='/wp-content/themes/glo-folio-2.0/images/preload.gif' alt='loading...' />";
+var ajax_load = "<img style='padding: 133px 0 0 246px' src='/static/wp-content/themes/glo-folio-2.0/images/preload.gif' alt='loading...' />";
 
 //  Config DATA as vars
-var afw = "/wp-content/themes/glo-folio-2.0/slidrs/afw.html";
-var sse = "/wp-content/themes/glo-folio-2.0/slidrs/sse.html";
-var dow = "/wp-content/themes/glo-folio-2.0/slidrs/dow.html";
-var reg = "/wp-content/themes/glo-folio-2.0/slidrs/reg.html";
-var bri = "/wp-content/themes/glo-folio-2.0/slidrs/bri.html";
-var iap2 = "/wp-content/themes/glo-folio-2.0/slidrs/iap2.html";
-var mag = "/wp-content/themes/glo-folio-2.0/slidrs/mag.html";
-var salaam = "/wp-content/themes/glo-folio-2.0/slidrs/salaam.html";
-var jcc = "/wp-content/themes/glo-folio-2.0/slidrs/jcc.html";
-var mak = "/wp-content/themes/glo-folio-2.0/slidrs/mak.html";
-var smrc = "/wp-content/themes/glo-folio-2.0/slidrs/smrc.html";
-var pc = "/wp-content/themes/glo-folio-2.0/slidrs/pc.html";
-var jazzmin = "/wp-content/themes/glo-folio-2.0/slidrs/sauda.html";
+var afw = "/static/wp-content/themes/glo-folio-2.0/slidrs/afw.html";
+var sse = "/static/wp-content/themes/glo-folio-2.0/slidrs/sse.html";
+var dow = "/static/wp-content/themes/glo-folio-2.0/slidrs/dow.html";
+var reg = "/static/wp-content/themes/glo-folio-2.0/slidrs/reg.html";
+var bri = "/static/wp-content/themes/glo-folio-2.0/slidrs/bri.html";
+var iap2 = "/static/wp-content/themes/glo-folio-2.0/slidrs/iap2.html";
+var mag = "/static/wp-content/themes/glo-folio-2.0/slidrs/mag.html";
+var salaam = "/static/wp-content/themes/glo-folio-2.0/slidrs/salaam.html";
+var jcc = "/static/wp-content/themes/glo-folio-2.0/slidrs/jcc.html";
+var mak = "/static/wp-content/themes/glo-folio-2.0/slidrs/mak.html";
+var smrc = "/static/wp-content/themes/glo-folio-2.0/slidrs/smrc.html";
+var pc = "/static/wp-content/themes/glo-folio-2.0/slidrs/pc.html";
+var jazzmin = "/static/wp-content/themes/glo-folio-2.0/slidrs/sauda.html";
 
-var ptiosBanner = "/wp-content/themes/glo-folio-2.0/slidrs/ptios.html";
-var ptv3Banner = "/wp-content/themes/glo-folio-2.0/slidrs/ptv3.html";
-var shtbBanner = "/wp-content/themes/glo-folio-2.0/slidrs/shtb.html";
+var ptiosBanner = "/static/wp-content/themes/glo-folio-2.0/slidrs/ptios.html";
+var ptv3Banner = "/static/wp-content/themes/glo-folio-2.0/slidrs/ptv3.html";
+var shtbBanner = "/static/wp-content/themes/glo-folio-2.0/slidrs/shtb.html";
 
 var mnFt = $('#s-main-featr');
 
@@ -417,7 +417,7 @@ function sunset() {
 function regines() {
     mnFt.html(ajax_load).load(reg);
     $('.li-reg').find('a').addClass('on').stop().animate({ backgroundPosition: "(-151px 0)"}, 400, 'easeInOutExpo');
-    return false; 
+    return false;
 }
 function rotary() {
     mnFt.html(ajax_load).load(salaam);
@@ -427,24 +427,24 @@ function rotary() {
 function sauda() {
     mnFt.html(ajax_load).load(jazzmin);
     $('.li-sauda').find('a').addClass('on').stop().animate({ backgroundPosition: "(-151px 0)"}, 400, 'easeInOutExpo');
-    return false; 
+    return false;
 }
 
 
 function ptios() {
     mnFt.html(ajax_load).load(ptiosBanner);
     $('.li-ptios').find('a').addClass('on').stop().animate({ backgroundPosition: "(-151px 0)"}, 400, 'easeInOutExpo');
-    return false; 
+    return false;
 }
 function ptv3() {
     mnFt.html(ajax_load).load(ptv3Banner);
     $('.li-ptv3').find('a').addClass('on').stop().animate({ backgroundPosition: "(-151px 0)"}, 400, 'easeInOutExpo');
-    return false; 
+    return false;
 }
 function shtb() {
     mnFt.html(ajax_load).load(shtbBanner);
     $('.li-shtb').find('a').addClass('on').stop().animate({ backgroundPosition: "(-151px 0)"}, 400, 'easeInOutExpo');
-    return false; 
+    return false;
 }
 
 
@@ -483,7 +483,7 @@ function getRandom() {
 
 
 $(window).load(function () {
-	
+
 
 });
 
@@ -512,7 +512,7 @@ function (event) {
     }
 });
 
-// SEARCH TEXT PLACEHOLDER TEXT ----------------------------------  
+// SEARCH TEXT PLACEHOLDER TEXT ----------------------------------
 
 
 function searchWatermark(sBox) {
