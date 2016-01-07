@@ -1,9 +1,0 @@
-{
-  "firebase": "glo-version-1",
-  "public": "public",
-  "ignore": [
-    "firebase.json",
-    "**/.*",
-    "**/node_modules/**"
-  ]
-}
