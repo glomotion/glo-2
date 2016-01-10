@@ -416,7 +416,7 @@ p {
 	margin: 4px 0 0;
 	padding: 70px 50px 0px 5px;
 	position: absolute;
-	z-index: 2; 
+	z-index: 2;
 	text-align: left;
 	top: 0;
 	width: 42px; height: 36px;
@@ -715,7 +715,8 @@ p {
 .about .col.far-lft {
 	display: none;
 }
-.about .col {
+.about .col,
+.home #s-main-cntnt .col {
 	width: 50%;
 }
 .col.mid-wde {
@@ -1141,7 +1142,7 @@ p {
 	width: 21px
 }
 #inflow-intro-substitute {
-	margin: 40px 0 0 0;	
+	margin: 40px 0 0 0;
 }
 #s-udnr-intr {
 	margin: 0;
@@ -1294,13 +1295,13 @@ p {
 	padding: 12px 0 0 0;
 	letter-spacing: 0;
 	font-size: 16px;
-	line-height: 21px;	
+	line-height: 21px;
 	font-family: "Droid Sans", san-serif;
-	position: relative;		
+	position: relative;
 	border-top: 13px solid rgba(255,255,255,0.1)
 }
-#s-main-cntnt .pf-item h2 > a { 
-	color: rgba(255,255,255,0.23);	
+#s-main-cntnt .pf-item h2 > a {
+	color: rgba(255,255,255,0.23);
 	padding: 0 55px 0 0;
 	min-height: 42px;
 	margin: 0;
@@ -1312,22 +1313,22 @@ em.work-type {
 	right: 0;
 	margin:  0;
 	padding: 0;
-	height: 100%; 
+	height: 100%;
 }
 em.work-type > span {
 	float: right;
 	text-align: center;
 	margin: 6px 0 0 13px;
-	opacity: 0.2;	
-	
+	opacity: 0.2;
+
 	-moz-transition: opacity 0.4s ease-in-out;
 	-webkit-transition: opacity 0.4s ease-in-out;
-   	transition: opacity 0.4s ease-in-out;	
+   	transition: opacity 0.4s ease-in-out;
 }
 em.work-type > span:before {
 	background: url(images/folio-type-icn-sprite-work.png) no-repeat;
 	content: "";
-	display: inline-block;	
+	display: inline-block;
 }
 #s-main-cntnt .pf-item:hover em.work-type > span {
 	opacity: 0.4;
@@ -1370,7 +1371,7 @@ em.work-type > span[data-type="offline"]:before {
 	text-decoration: underline
 }
 .a-thmb, .a-thmb img {
-	display: block;	
+	display: block;
 }
 .inside #s-intro {
 	min-width: 320px;
@@ -1807,20 +1808,20 @@ input[type="radio"], .ie6 input {
 	-moz-transition: all .3s ease-in-out;
 	-webkit-transition: all .3s linear;
 	transition: all .3s linear;
-	
+
 	-webkit-filter: grayscale(1.0);
 	filter: grayscale(1.0);
 }
 
 .post-particulars {
-	margin: 5px 35px 30px 0;	
+	margin: 5px 35px 30px 0;
 }
 .post-particulars .entry-meta {
 	float: left;
 	margin: 0;
 }
 .post-particulars .tag-links {
-	display: block;	
+	display: block;
 	margin: 0 0 0 38%;
 }
 
