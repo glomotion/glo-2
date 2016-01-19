@@ -1,13 +1,29 @@
-'use strict';
+import {initialize} from "maxim";
 
-import BlackTriangle from "./components/BlackTriangle";
+// Controls
+import NavigationControl from "./controls/NavigationControl";
+import BlackTriangleControl from "./controls/BlackTriangleControl";
 
-const triangle = new BlackTriangle('#triangle');
+// Models
+import NavigationModel from "./models/NavigationModel";
+import BlackTriangleModel from "./models/BlackTriangleModel";
 
-window.setInterval(
-  () => {
-    triangle.rotate(1);
-    triangle.render();
+// Actors
+import UserInterfaceActor from "./actors/UserInterfaceActor";
+import AnimatorActor from "./actors/AnimatorActor";
+
+
+const app = initialize({
+  controls: {
+    Navigation: NavigationControl,
+    BlackTriangle: BlackTriangleControl,
   },
-  20
-);
+  models: {
+    Navigation: NavigationModel,
+    BlackTriangle: BlackTriangleModel,
+  },
+  actors: [
+    UserInterfaceActor,
+    AnimatorActor
+  ],
+});
