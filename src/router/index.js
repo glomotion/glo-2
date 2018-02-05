@@ -7,7 +7,7 @@ const Moo = () => import('@/components/Moo');
 Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
+  // mode: 'history',
   routes: [
     {
       path: '/',
