@@ -1,6 +1,6 @@
-import About from './';
-import Default from './Default';
-import Form from './Form';
+const About = () => import('./App');
+const Default = () => import('./Default');
+const Form = () => import('./Form');
 
 export default {
   path: '/about',
