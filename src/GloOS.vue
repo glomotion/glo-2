@@ -1,7 +1,10 @@
 <template>
   <div id="glo-os">
     <header>
-      moo
+      <router-link to="/">root</router-link>
+      <router-link to="/search">/search</router-link>
+      <router-link to="/about">/about</router-link>
+      <router-link to="/about/form">/form</router-link>
     </header>
     <transition name="fade" mode="out-in">
       <router-view class="app-view" />
@@ -25,6 +28,10 @@ html, body {
   height: 100%;
 }
 
+:root {
+  --header-height: 6vh;
+}
+
 #glo-os {
   font-family: 'Lato', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -33,7 +40,8 @@ html, body {
   height: 100%;
 
   & header {
-    background: gold;
+    background: #f1f1f1;
+    height: var(--header-height);
   }
 }
 

@@ -2,7 +2,7 @@
   <div>
     <h1>about</h1>
     <transition :name="transitionName">
-      <router-view class="child-view" />
+      <router-view class="route-view" />
     </transition>
   </div>
 </template>
