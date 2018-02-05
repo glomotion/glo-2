@@ -67,7 +67,7 @@ module.exports = {
 
     'padded-blocks': [0],
 
-    'lines-around-comment': ["error", {
+    'lines-around-comment': [0, {
       "beforeBlockComment": true,
       "beforeLineComment": true,
       "afterBlockComment": false,

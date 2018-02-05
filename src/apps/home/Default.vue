@@ -1,14 +1,12 @@
 <template>
   <div>
-    <h1>mooo</h1>
-    <pre>{{ $store.state }}</pre>
-    <pre>{{ msg }}</pre>
+    <h1>default</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Moo',
+  name: 'Default',
   data() {
     return {
       msg: 'Welcome to Your Vue.js App',

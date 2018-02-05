@@ -10,8 +10,8 @@
     "test": "npm run e2e",
     "lint": "eslint --ext .js,.vue src test/e2e/specs",
     "build": "node build/build.js",
-    "presurge": "yarn build",
-    "surge": "cp CNAME dist/; surge dist/"
+    "presurge": "yarn build; cp CNAME-src dist/CNAME;",
+    "surge": "surge dist/"
   },
   "dependencies": {
     "vue": "^2.5.2",
