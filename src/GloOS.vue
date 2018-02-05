@@ -2,9 +2,9 @@
   <div id="glo-os">
     <header>
       <router-link to="/">root</router-link>
-      <router-link to="/search">/search</router-link>
-      <router-link to="/about">/about</router-link>
-      <router-link to="/about/form">/form</router-link>
+      <router-link to="/search">root/search</router-link>
+      <router-link to="/about">about</router-link>
+      <router-link to="/about/form">about/form</router-link>
     </header>
     <transition name="fade" mode="out-in">
       <router-view class="app-view" />

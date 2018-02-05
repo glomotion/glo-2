@@ -15,11 +15,11 @@ export default {
       transitionName: 'slide-left',
     };
   },
+  // @TODO: this logic could maybe be abstracted ...?
   beforeRouteUpdate(to, from, next) {
     const toDepth = to.path.split('/').length;
     const fromDepth = from.path.split('/').length;
-    if (toDepth.length === 1
-      || toDepth < fromDepth) {
+    if (to.path === '/' || toDepth < fromDepth) {
       this.transitionName = 'slide-right';
     } else {
       this.transitionName = 'slide-left';

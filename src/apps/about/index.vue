@@ -18,12 +18,7 @@ export default {
   beforeRouteUpdate(to, from, next) {
     const toDepth = to.path.split('/').length;
     const fromDepth = from.path.split('/').length;
-    if (toDepth.length === 1
-      || toDepth < fromDepth) {
-      this.transitionName = 'slide-right';
-    } else {
-      this.transitionName = 'slide-left';
-    }
+    this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left';
     next();
   },
 };
