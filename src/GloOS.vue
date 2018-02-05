@@ -16,11 +16,21 @@ export default {
 </script>
 
 <style>
+/* postcss-normalize */
+@import-normalize;
+@import "http://fonts.googleapis.com/css?family=Lato:100,300,300i,400,400i,700,900";
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
 #glo-os {
   font-family: 'Lato', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+  height: 100%;
 
   & header {
     background: gold;

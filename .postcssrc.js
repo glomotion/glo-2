@@ -2,7 +2,11 @@
 
 module.exports = {
   "plugins": {
-    "postcss-import": {},
+    "postcss-normalize": {},
+    // "postcss-import": {},
+    "postcss-import-url": {
+      "modernBrowser": true,
+    },
     "postcss-url": {},
     "postcss-cssnext": {},
     // to edit target browsers: use "browserslist" field in package.json
