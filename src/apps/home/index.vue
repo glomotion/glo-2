@@ -1,18 +1,18 @@
 <template>
   <div>
-    <h1>about</h1>
+    <h1>Home</h1>
     <transition :name="transitionName">
-      <router-view class="child-view"></router-view>
+      <router-view class="route-view" />
     </transition>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'About',
+  name: 'Home',
   data() {
     return {
-      transitionName: 'slide-left'
+      transitionName: 'slide-left',
     };
   },
   beforeRouteUpdate(to, from, next) {

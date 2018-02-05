@@ -1,4 +1,4 @@
-import Home from './Home';
+import Home from './';
 import Default from './Default';
 import Search from './Search';
 
@@ -7,7 +7,7 @@ import Search from './Search';
 // const Search = import('./Search');
 
 export default {
-  path: '/', 
+  path: '/',
   component: Home,
   children: [
     { path: '', component: Default },

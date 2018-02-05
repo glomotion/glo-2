@@ -4,7 +4,7 @@
       moo
     </header>
     <transition name="fade" mode="out-in">
-      <router-view class="view"></router-view>
+      <router-view class="app-view" />
     </transition>
   </div>
 </template>
@@ -33,7 +33,7 @@ export default {
 .fade-enter, .fade-leave-active {
   opacity: 0
 }
-.child-view {
+.route-view {
   position: absolute;
   transition: all .5s cubic-bezier(.55,0,.1,1);
 }

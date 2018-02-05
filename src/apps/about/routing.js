@@ -1,9 +1,9 @@
-import About from './About';
+import About from './';
 import Default from './Default';
 import Form from './Form';
 
 export default {
-  path: '/about', 
+  path: '/about',
   component: About,
   children: [
     { path: '', component: Default },
