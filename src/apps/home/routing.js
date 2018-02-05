@@ -1,10 +1,10 @@
-import Home from './';
-import Default from './Default';
-import Search from './Search';
+// import Home from './';
+// import Default from './Default';
+// import Search from './Search';
 
-// const Home = import('./Home');
-// const Default = import('./Default');
-// const Search = import('./Search');
+const Home = () => import('./');
+const Default = () => import('./Default');
+const Search = () => import('./Search');
 
 export default {
   path: '/',
