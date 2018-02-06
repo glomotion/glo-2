@@ -15,7 +15,6 @@ export default {
       transitionName: 'slide-left',
     };
   },
-  // @TODO: this logic could maybe be abstracted ...?
   beforeRouteUpdate(to, from, next) {
     const toDepth = to.path.split('/').length;
     const fromDepth = from.path.split('/').length;
