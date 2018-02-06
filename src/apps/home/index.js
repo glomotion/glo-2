@@ -1,4 +1,4 @@
-import Home from './';
+import Home from './App';
 import Default from './Default';
 import Search from './Search';
 

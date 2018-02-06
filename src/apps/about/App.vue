@@ -8,6 +8,8 @@
 </template>
 
 <script>
+import { fwdsOrBkwds } from '@/utils-and-data/utils';
+
 export default {
   name: 'About',
   data() {
@@ -15,12 +17,7 @@ export default {
       transitionName: 'slide-left',
     };
   },
-  beforeRouteUpdate(to, from, next) {
-    const toDepth = to.path.split('/').length;
-    const fromDepth = from.path.split('/').length;
-    this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left';
-    next();
-  },
+  beforeRouteUpdate: fwdsOrBkwd(to, from, next),
 };
 </script>
 
