@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { fwdsOrBkwds } from '@/utils-and-data/utils';
+import { fwdOrBkwd } from '@/utils-and-data/utils';
 
 export default {
   name: 'About',
@@ -17,7 +17,10 @@ export default {
       transitionName: 'slide-left',
     };
   },
-  beforeRouteUpdate: fwdsOrBkwd(to, from, next),
+  beforeRouteUpdate(to, from, next) {
+    this.transitionName = fwdOrBkwd(to, from);
+    next();
+  },
 };
 </script>
 
