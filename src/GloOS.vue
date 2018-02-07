@@ -28,7 +28,7 @@ export default {
 <style>
 /* postcss-normalize */
 @import-normalize;
-@import "http://fonts.googleapis.com/css?family=Lato:100,300,300i,400,400i,700,900";
+@import "http://fonts.googleapis.com/css?family=Lato:100,300,300i,400,400i,700,900|Material+Icons";
 
 html, body {
   margin: 0;
