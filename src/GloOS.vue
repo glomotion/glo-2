@@ -5,6 +5,8 @@
       <router-link to="/search">root/search</router-link>
       <router-link to="/about">about</router-link>
       <router-link to="/about/form">about/form</router-link>
+
+      <i class="material-icons">fingerprint</i>
     </header>
     <transition name="fade" mode="out-in">
       <router-view class="app-view" />
@@ -21,7 +23,7 @@ export default {
 <style>
 /* postcss-normalize */
 @import-normalize;
-@import "http://fonts.googleapis.com/css?family=Lato:100,300,300i,400,400i,700,900";
+@import "http://fonts.googleapis.com/css?family=Lato:100,300,300i,400,400i,700,900|Material+Icons";
 
 html, body {
   margin: 0;
