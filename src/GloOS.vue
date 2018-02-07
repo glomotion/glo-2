@@ -1,10 +1,8 @@
 <template>
   <div id="glo-os">
     <header>
-      <router-link to="/">root</router-link>
-      <router-link to="/search">root/search</router-link>
-      <router-link to="/about">about</router-link>
-      <router-link to="/about/form">about/form</router-link>
+      notification area
+      <span>{{ time }}</span>
     </header>
     <transition name="fade" mode="out-in">
       <router-view class="app-view" />
@@ -15,6 +13,15 @@
 <script>
 export default {
   name: 'GloOS',
+  data: () => ({
+    time: '00:00',
+  }),
+  created() {
+    console.log('gloos created');
+  },
+  methods: {
+
+  },
 };
 </script>
 
