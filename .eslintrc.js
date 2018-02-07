@@ -65,6 +65,16 @@ module.exports = {
       'skipBlankLines': true 
     }],
 
+    'vue/html-self-closing': [0, {
+      'html': {
+        'void': 'never',
+        'normal': 'always',
+        'component': 'always'
+      },
+      'svg': 'always',
+      'math': 'always'
+    }],
+
     'padded-blocks': [0],
 
     'lines-around-comment': [0, {

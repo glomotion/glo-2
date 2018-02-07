@@ -1,8 +1,8 @@
 <template>
   <div id="glo-os">
-    <header>
-      notification area
-      <span>{{ time }}</span>
+    <header class="tray">
+      <div class="notifications" />
+      <WallTime />
     </header>
     <transition name="fade" mode="out-in">
       <router-view class="app-view" />
@@ -11,11 +11,22 @@
 </template>
 
 <script>
+import WallTime from '@/partials/WallTime';
+
 export default {
   name: 'GloOS',
+  components: {
+    WallTime,
+  },
   data: () => ({
-    time: '00:00',
+  
   }),
+  computed: {
+  
+  },
+  mounted() {
+  
+  },
   created() {
     console.log('gloos created');
   },
@@ -36,7 +47,8 @@ html, body {
 }
 
 :root {
-  --header-height: 6vh;
+  --tray-height: 6vh;
+  --padding: 4vw;
 }
 
 #glo-os {
@@ -45,10 +57,15 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
 
-  & header {
+  & .tray {
     background: #f1f1f1;
-    height: var(--header-height);
+    height: var(--tray-height);
+    line-height: var(--tray-height);
+    text-align: right;
+    padding: 0 var(--padding);
   }
 }
 

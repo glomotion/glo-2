@@ -1,12 +1,8 @@
-export const fwdOrBkwd = (to, from) => {
+export function fwdOrBkwd(to, from) {
   const toDepth = to.path.split('/').length;
   const fromDepth = from.path.split('/').length;
   return toDepth <= fromDepth ? 'slide-right' : 'slide-left';
-};
-
-export const somethingElse = () => {
-
-};
+}
 
 /*
 *    Implements *basic* LocalStorage functionality:
@@ -16,17 +12,15 @@ export const somethingElse = () => {
 
 // @TODO: Add expiry date to all items
 export function LS() {
-  const EXPIRY = 10;
+  // const EXPIRY = 10;
   return {
     set: (name, value) => {
       console.log('LS, set:', name, value);
       window.localStorage.setItem(name, value);
     },
-    get: (name) => {
-      return window.localStorage.getItem(name);
-    },
-  }
-})
+    get: name => window.localStorage.getItem(name),
+  };
+}
 
 export function GetSimpleRect(el) {
   const rect = el.getBoundingClientRect();
