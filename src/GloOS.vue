@@ -65,7 +65,7 @@ html, body {
   & .tray {
     position: absolute;
     top: 0; left: 0;
-    background: rgba(0,0,0,0.15);
+    background: rgba(0,0,0,0.1);
     color: white;
     width: 100%;
     height: var(--tray-height);
