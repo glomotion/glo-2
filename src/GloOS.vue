@@ -1,12 +1,12 @@
 <template>
   <div id="glo-os">
+    <transition name="fade" mode="out-in">
+      <router-view class="app-view" />
+    </transition>
     <header class="tray">
       <div class="notifications" />
       <WallTime />
     </header>
-    <transition name="fade" mode="out-in">
-      <router-view class="app-view" />
-    </transition>
   </div>
 </template>
 
@@ -46,8 +46,12 @@ html, body {
   height: 100%;
 }
 
+*,*:before,*:after {
+  box-sizing: border-box;
+}
+
 :root {
-  --tray-height: 6vh;
+  --tray-height: 5vh;
   --padding: 4vw;
 }
 
@@ -57,15 +61,21 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   height: 100%;
-  display: flex;
-  flex-flow: column nowrap;
 
   & .tray {
-    background: #f1f1f1;
+    position: absolute;
+    top: 0; left: 0;
+    background: rgba(0,0,0,0.15);
+    color: white;
+    width: 100%;
     height: var(--tray-height);
     line-height: var(--tray-height);
     text-align: right;
     padding: 0 var(--padding);
+  }
+
+  & .app-view {
+    padding-top: var(--tray-height);
   }
 }
 

@@ -3,15 +3,16 @@
 
     <div class="panel feed"></div>
     <div class="panel launcher">
+      <i class="wallpaper" />
       <div class="icon-layout">
-        <router-link to="/about"><i title="about" /></router-link>
+        <router-link to="/about"><i icon="account_circle" title="about" /></router-link>
         <i class="empty"></i>
         <i class="empty"></i>
-        <router-link to="/lab"><i title="lab" /></router-link>
-        <router-link to="/folio"><i title="folio" /></router-link>
-        <router-link to="/maps"><i title="maps" /></router-link>
-        <router-link to="/weather"><i title="weather" /></router-link>
-        <router-link to="/contact"><i title="contact" /></router-link>
+        <router-link to="/lab"><i icon="opacity" title="lab" /></router-link>
+        <router-link to="/folio"><i icon="fingerprint" title="folio" /></router-link>
+        <router-link to="/maps"><i icon="place" title="maps" /></router-link>
+        <router-link to="/weather"><i icon="wb_sunny" title="weather" /></router-link>
+        <router-link to="/contact"><i icon="mail" title="contact" /></router-link>
       </div>
       <footer>launcher footer</footer>
     </div>
@@ -41,10 +42,15 @@ export default {
 </script>
 
 <style scoped>
+:root {
+  --footer-height: 7vh;
+}
+
 .app {
   height: 100%;
   position: relative;
   overflow: hidden;
+  color: white;
 }
 .panel {
   position: absolute;
@@ -57,8 +63,8 @@ export default {
     flex-flow: column nowrap;
 
     & footer {
-      height: 15vh;
-      line-height: 15vh;
+      height: var(--footer-height);
+      line-height: var(--footer-height);
       text-align: center;
     }
   }
@@ -73,6 +79,25 @@ export default {
     background: yellowgreen;
   }
 }
+.wallpaper {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('http://lorempixel.com/600/900/nature/');
+  background-size: cover;
+  background-position: center;
+
+  &:after {
+    position: absolute;
+    content: "";
+    bottom: 0; left: 0;
+    height: 50%;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 100%);
+  }
+}
+
 .icon-layout {
   display: flex;
   flex-flow: row wrap;
@@ -90,9 +115,11 @@ export default {
 
   & a {
     width: 20.5%;
-    background: gold;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+    text-decoration: none;
+    color: inherit;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
 
     & i {
       flex-grow: 1;
@@ -100,15 +127,15 @@ export default {
       position: relative;
       width: 100%;
       padding-bottom: 100%;
+      font-style: normal;
 
       &:after {
-        content: "";
+        content: attr(icon);
+        font-family: 'Material Icons';
         position: absolute;
-        left: 50%;
-        top: 10px;
-        width: 50%;
-        padding-bottom: 50%;
-        background: black;
+        font-size: 60px;
+        line-height: 1;
+        top: 0; left: 50%;
         transform: translateX(-50%);
       }
 
@@ -118,7 +145,8 @@ export default {
         width: 100%;
         bottom: 10px;
         left: 0;
-        text-align: center
+        text-align: center;
+        font-size: 13px;
       }
     }
   }
