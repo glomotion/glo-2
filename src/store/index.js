@@ -3,6 +3,8 @@ import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
+Vue.config.devtools = true;
+
 export default new Vuex.Store({
   state: {
     moo: true,
@@ -36,6 +38,6 @@ export default new Vuex.Store({
   },
 
   modules: {},
-  
-  strict: process.env.NODE_ENV !== 'production',
+
+  // strict: process.env.NODE_ENV !== 'production',
 });

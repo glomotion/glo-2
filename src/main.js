@@ -7,7 +7,6 @@ import router from './router';
 import store from './store';
 
 Vue.config.productionTip = true;
-Vue.config.devtools = true;
 
 const moo = { cow: true };
 
