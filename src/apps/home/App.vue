@@ -7,8 +7,6 @@
       <div class="align-bottom">
         <div class="icon-layout">
           <router-link to="/about"><i icon="account_circle" title="about" /></router-link>
-          <i class="empty"></i>
-          <i class="empty"></i>
           <router-link to="/lab"><i icon="opacity" title="lab" /></router-link>
           <router-link to="/folio"><i icon="fingerprint" title="folio" /></router-link>
           <router-link to="/maps"><i icon="place" title="maps" /></router-link>
@@ -34,7 +32,7 @@ export default {
   },
   data() {
     return {
-      
+
     };
   },
   mounted() {
@@ -89,10 +87,10 @@ export default {
   top: -5%; left: -5%;
   width: 110%;
   height: 110%;
-  background-image: url('http://lorempixel.com/600/900/nature/');
+  background-image: url('../../assets/img/demo-bg.jpg');
   background-size: cover;
   background-position: center;
-  filter: blur(5px);
+  /*filter: blur(5px);*/
 
   /* protective skrim */
   &:after {
@@ -131,6 +129,31 @@ export default {
     color: inherit;
     text-shadow: 0 1px 1px rgba(0,0,0,0.2);
     position: relative;
+
+    &:nth-child(2) {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    &:nth-child(3) {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    &:nth-child(4) {
+      grid-column: 4;
+      grid-row: 2;
+    }
+
+    &:nth-child(5) {
+      grid-column: 4;
+      grid-row: 1;
+    }
+
+    &:nth-child(6) {
+      grid-column: 3;
+      grid-row: 2;
+    }
 
     &:before {
       content: "";
