@@ -1,18 +1,15 @@
 <template>
   <div class="app">
-
     <div class="panel feed"></div>
     <div class="panel launcher">
       <i class="wallpaper" />
-      <div class="align-bottom">
-        <div class="icon-layout">
-          <router-link to="/about"><i icon="account_circle" title="about" /></router-link>
-          <router-link to="/lab"><i icon="opacity" title="lab" /></router-link>
-          <router-link to="/folio"><i icon="fingerprint" title="folio" /></router-link>
-          <router-link to="/maps"><i icon="place" title="maps" /></router-link>
-          <router-link to="/weather"><i icon="wb_sunny" title="weather" /></router-link>
-          <router-link to="/contact"><i icon="mail" title="contact" /></router-link>
-        </div>
+      <div class="icon-layout">
+        <router-link to="/about"><i icon="account_circle" title="about" /></router-link>
+        <!-- <router-link to="/lab"><i icon="opacity" title="lab" /></router-link> -->
+        <router-link to="/folio"><i icon="fingerprint" title="folio" /></router-link>
+        <router-link to="/maps"><i icon="place" title="maps" /></router-link>
+        <router-link to="/weather"><i icon="wb_sunny" title="weather" /></router-link>
+        <router-link to="/contact"><i icon="mail" title="contact" /></router-link>
       </div>
       <footer>launcher footer</footer>
     </div>
@@ -103,13 +100,11 @@ export default {
   }
 }
 
-.align-bottom {
+.icon-layout {
   margin: auto 0 0;
   align-self: flex-end;
   width: 100%;
-}
 
-.icon-layout {
   display: grid;
   padding: 0 20px 40px;
   grid-column-gap: 20px;
@@ -130,28 +125,33 @@ export default {
     text-shadow: 0 1px 1px rgba(0,0,0,0.2);
     position: relative;
 
+    /* ABOUT */
+    &:nth-child(1) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    /* FOLIO */
     &:nth-child(2) {
       grid-column: 1;
       grid-row: 2;
     }
 
+    /* MAPS */
     &:nth-child(3) {
       grid-column: 2;
       grid-row: 2;
     }
 
+    /* WEATHER */
     &:nth-child(4) {
-      grid-column: 4;
-      grid-row: 2;
-    }
-
-    &:nth-child(5) {
       grid-column: 4;
       grid-row: 1;
     }
 
-    &:nth-child(6) {
-      grid-column: 3;
+    /* CONTACT */
+    &:nth-child(5) {
+      grid-column: 4;
       grid-row: 2;
     }
 
@@ -194,7 +194,9 @@ export default {
       }
 
       &[title="lab"],
-      &[title="maps"] {
+      &[title="maps"],
+      &[title="weather"] {
+
         pointer-events: none;
         user-select: none;
         opacity: 0.3;
