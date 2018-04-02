@@ -196,10 +196,7 @@ export default {
       &[title="lab"],
       &[title="maps"],
       &[title="weather"] {
-
-        pointer-events: none;
-        user-select: none;
-        opacity: 0.3;
+        opacity: 0.4;
       }
     }
   }
