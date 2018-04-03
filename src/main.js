@@ -18,11 +18,5 @@ new Vue({
   router,
   store,
   provide: { moo },
-  created() {
-    // console.log('app created', this);
-  },
-  mounted() {
-    // console.log('app mounted', this);
-  },
-  template: '<GloOS />',
+  render: h => h(GloOS),
 });

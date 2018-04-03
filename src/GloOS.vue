@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import WallTime from '@/partials/WallTime';
+import WallTime from './partials/WallTime';
 
 export default {
   name: 'GloOS',
@@ -19,13 +19,13 @@ export default {
     WallTime,
   },
   data: () => ({
-  
+
   }),
   computed: {
-  
+
   },
   mounted() {
-  
+
   },
   created() {
     console.log('gloos created');
