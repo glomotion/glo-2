@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { fwdOrBkwd } from '@/utils-and-data/utils';
+import { fwdOrBkwd } from '../../utils-and-data/utils';
 
 export default {
   name: 'About',

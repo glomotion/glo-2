@@ -13,10 +13,8 @@ const moo = { cow: true };
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  components: { GloOS },
-  data: {},
   router,
   store,
-  provide: { moo },
+  // provide: { moo },
   render: h => h(GloOS),
 });
