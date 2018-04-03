@@ -5,7 +5,7 @@
   "author": "Tim Paul <tim@glo.id.au>",
   "scripts": {
     "prestart": "yarn clean",
-    "start": "parcel index.html -p 8080 --open",
+    "start": "parcel -p 8080 --open",
     "e2e": "node test/e2e/runner.js",
     "test": "yarn run e2e",
     "lint": "eslint --ext .js,.vue src test/e2e/specs",
