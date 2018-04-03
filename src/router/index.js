@@ -9,7 +9,8 @@ import aboutRoutes from '../apps/about/';
 Vue.use(Router);
 const router = new Router({
   routes: [
-    homeRoutes, aboutRoutes,
+    homeRoutes,
+    aboutRoutes,
   ],
 });
 

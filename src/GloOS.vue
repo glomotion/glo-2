@@ -1,15 +1,3 @@
-<template>
-  <div id="glo-os">
-    <transition name="fade" mode="out-in">
-      <router-view class="app-view" />
-    </transition>
-    <header class="tray">
-      <div class="notifications" />
-      <WallTime />
-    </header>
-  </div>
-</template>
-
 <script>
 import WallTime from './partials/WallTime';
 
@@ -98,3 +86,15 @@ html, body {
   transform: translate(-30px, 0);
 }
 </style>
+
+<template>
+  <div id="glo-os">
+    <transition name="fade" mode="out-in">
+      <router-view class="app-view" />
+    </transition>
+    <header class="tray">
+      <div class="notifications" />
+      <WallTime />
+    </header>
+  </div>
+</template>

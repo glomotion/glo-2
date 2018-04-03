@@ -1,4 +1,4 @@
-const About = () => import('./App');
+const About = () => import('./About');
 const Default = () => import('./Default');
 const Form = () => import('./Form');
 
