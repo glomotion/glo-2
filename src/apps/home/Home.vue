@@ -85,7 +85,6 @@ export default {
   top: -5%; left: -5%;
   width: 110%;
   height: 110%;
-  background: gold;
   background-image: url('../../assets/img/demo-bg.jpg');
   background-size: cover;
   background-position: center;
