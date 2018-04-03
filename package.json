@@ -11,7 +11,8 @@
     "lint": "eslint --ext .js,.vue src test/e2e/specs",
     "clean": "rm -rf dist/",
     "prebuild": "yarn clean",
-    "build": "parcel build index.html",
+    "_build": "parcel build index.html",
+    "build": "parcel build",
     "presurge": "yarn build; cp CNAME-src dist/CNAME;",
     "surge": "surge dist/"
   },
