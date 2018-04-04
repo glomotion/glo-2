@@ -4,7 +4,7 @@ import WallTime from './partials/WallTime';
 export default {
   name: 'GloOS',
   components: {
-    WallTime,
+    WallTime
   },
   data: () => ({
 

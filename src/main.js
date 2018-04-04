@@ -3,8 +3,8 @@
 import Vue from 'vue';
 
 import GloOS from './GloOS';
-import router from './router';
-import store from './store';
+import router from './router/';
+import store from './store/';
 
 Vue.config.productionTip = true;
 

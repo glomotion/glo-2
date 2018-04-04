@@ -4,10 +4,11 @@ import Home from './Home';
 
 export default {
   path: '/',
+  name: 'Home',
   component: Home,
-  children: [
-    // { path: '', component: Default },
-    // { path: 'search', component: Search },
-    // { path: 'feeds', component: Feeds },
-  ],
+  // children: [
+  //   // { path: '', component: Default },
+  //   // { path: 'search', component: Search },
+  //   // { path: 'feeds', component: Feeds },
+  // ],
 };

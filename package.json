@@ -5,13 +5,13 @@
   "author": "Tim Paul <tim@glo.id.au>",
   "scripts": {
     "prestart": "yarn clean",
-    "start": "parcel -p 8080 --open",
+    "start": "parcel index.html --open",
     "e2e": "node test/e2e/runner.js",
     "test": "yarn run e2e",
     "lint": "eslint --ext .js,.vue src test/e2e/specs",
     "clean": "rm -rf dist/",
     "prebuild": "yarn clean",
-    "_build": "parcel build index.html",
+    "_build": "parcel build --out-file index.html",
     "build": "parcel build",
     "presurge": "yarn build; cp CNAME-src dist/CNAME;",
     "surge": "surge dist/"
