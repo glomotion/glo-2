@@ -23,13 +23,8 @@ export function LS() {
 }
 
 export function GetSimpleRect(el) {
-  const rect = el.getBoundingClientRect();
-  return {
-    top: rect.top,
-    left: rect.left,
-    width: rect.width,
-    height: rect.height,
-  };
+  const { top, left, width, height } = el.getBoundingClientRect();
+  return { top,left, width, height };
 }
 
 export function PromiseState(p) {
