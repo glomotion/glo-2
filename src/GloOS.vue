@@ -5,7 +5,7 @@
     </transition>
     <header class="tray">
       <div class="notifications" />
-      <WallTime />
+      <WallTime class="custom-walltimer" />
     </header>
   </div>
 </template>
@@ -55,6 +55,33 @@ html, body {
   --padding: 4vw;
 }
 
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s ease;
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
+.route-view {
+  position: absolute;
+  transition: all .5s cubic-bezier(.55,0,.1,1);
+}
+.slide-left-enter, .slide-right-leave-active {
+  opacity: 0;
+  transform: translate(30px, 0);
+}
+.slide-left-leave-active, .slide-right-enter {
+  opacity: 0;
+  transform: translate(-30px, 0);
+}
+</style>
+
+<style scoped>
+.custom-walltimer {
+  font-size: 30px;
+  background: gold;
+  color: black;
+}
+
 #glo-os {
   font-family: 'Lato', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -77,24 +104,5 @@ html, body {
   & .app-view {
     padding-top: var(--tray-height);
   }
-}
-
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s ease;
-}
-.fade-enter, .fade-leave-active {
-  opacity: 0
-}
-.route-view {
-  position: absolute;
-  transition: all .5s cubic-bezier(.55,0,.1,1);
-}
-.slide-left-enter, .slide-right-leave-active {
-  opacity: 0;
-  transform: translate(30px, 0);
-}
-.slide-left-leave-active, .slide-right-enter {
-  opacity: 0;
-  transform: translate(-30px, 0);
 }
 </style>

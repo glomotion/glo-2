@@ -24,7 +24,7 @@ export function LS() {
 
 export function GetSimpleRect(el) {
   const { top, left, width, height } = el.getBoundingClientRect();
-  return { top,left, width, height };
+  return { top, left, width, height };
 }
 
 export function PromiseState(p) {
